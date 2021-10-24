@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 mysql-connector = "==2.2.9"
-pysbr = "==0.0.1"
+pysbr = "git+https://github.com/JeMorriso/PySBR.git"
 [dev-packages]
 
 [requires]
