@@ -1,9 +1,9 @@
-import pandas as pd
-import datetime
+# import pandas as pd
+# import datetime
 
 import mysql.connector
 
-cnx = mysql.connector.connect(user='root', password='',
+cnx = mysql.connector.connect(user='ben', password='',
                               host='127.0.0.1',
                               database='odds')
 cursor = cnx.cursor()
