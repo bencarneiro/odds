@@ -9,7 +9,7 @@ cnx = mysql.connector.connect(user='ben', password='',
 cursor = cnx.cursor()
 
 drop_query = (
-    "DROP ALL TABLES
+    "DROP ALL TABLES"
 )
 
 create_sportsbooks = (
