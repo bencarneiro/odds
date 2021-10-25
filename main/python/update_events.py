@@ -1,3 +1,14 @@
+from pysbr import *
+
+import mysql.connector
+
+cnx = mysql.connector.connect(user='ben', password='',
+                              host='127.0.0.1',
+                              database='odds')
+cursor = cnx.cursor()
+
+
+
 dt = datetime.datetime.now() - datetime.timedelta(days=3)
 timestamp = datetime.datetime.now()
 games = pysbr.EventsByDate(nfl.league_id, dt).list()

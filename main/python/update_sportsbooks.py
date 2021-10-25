@@ -1,5 +1,3 @@
-import datetime
-
 from pysbr import *
 
 import mysql.connector

@@ -6,6 +6,8 @@ cnx = mysql.connector.connect(user='ben', password='',
                               host='127.0.0.1',
                               database='odds')
 
+# This script pulls the nfl teams to the nfl_teams table. run it maybe once a season
+
 nfl = NFL()
 teams_inserts = []
 for team in nfl.league_config()['teams']:

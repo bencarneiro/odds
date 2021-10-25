@@ -32,6 +32,28 @@ create_nfl_teams = (
     ") ENGINE=InnoDB"
 )
 
+create_nfl_events = (
+    "CREATE TABLE nfl_events ("
+    "`recorded_at` DATETIME,"
+    "`participant_id_1` INT,"
+    "`participant_id_2` INT,"
+    "`participant_name_1` VARCHAR(256),"
+    "`participant_name_2` VARCHAR(256),"
+    "`is_home_1` BOOLEAN,"
+    "`is_home_2` BOOLEAN,"
+    "`score_1` INT,"
+    "`score_2` INT,"
+    "`sport_id` INT,"
+    "`league_id` INT,"
+    "`season_id` INT,"
+    "`event_id` INT,"
+    "`description` VARCHAR(256),"
+    "`location` VARCHAR(256),"
+    "`event_status` VARCHAR(256),"
+    "`event_date` DATETIME"
+    ") ENGINE=InnoDB"
+)
 
-cursor.execute(test_query)
+
+cursor.execute(create_sportsbooks)
 cnx.close()
