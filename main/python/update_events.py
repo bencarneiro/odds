@@ -9,7 +9,7 @@ cnx = mysql.connector.connect(user='ben', password='',
                               database='odds')
 cursor = cnx.cursor()
 
-dt = datetime.datetime.now()
+dt = datetime.datetime.now()- datetime.timedelta(days=1)
 nfl = NFL()
 games = EventsByDate(nfl.league_id, dt).list()
 games_rows = []
