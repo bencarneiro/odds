@@ -9,15 +9,26 @@ cnx = mysql.connector.connect(user='ben', password='',
 cursor = cnx.cursor()
 
 drop_query = (
-    "DROP TABLE sportsbooks"
+    "DROP ALL TABLES
 )
 
-test_query = (
+create_sportsbooks = (
     "CREATE TABLE `sportsbooks` ("
     "  `sportsbook_id` int(11) NOT NULL,"
     "  `system_id` int(11),"
     "  `name` text NOT NULL,"
     "  `alias` text"
+    ") ENGINE=InnoDB"
+)
+
+create_nfl_teams = (
+    "CREATE TABLE `nfl_teams` ("
+    "`sbr_abbreviation` VARCHAR(256),"
+    "`abbreviation` VARCHAR(256),"
+    "`team_id` INT,"
+    "`name` VARCHAR(256),"
+    "`nickname` VARCHAR(256),"
+    "`location` VARCHAR(256)"
     ") ENGINE=InnoDB"
 )
 
