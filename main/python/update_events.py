@@ -30,9 +30,11 @@ for game in games:
     event_data = [(dt,participant_id_1,participant_id_2,participant_name_1,participant_name_2,is_home_1,is_home_2,score_1,score_2,game['sport id'],game['league id'],game['season id'],game['event id'],game['description'],game['location'],game['event status'],game['datetime'])]
     games_rows += event_data
 
-add_sportsbook_query = "INSERT INTO `nfl_events` (`recorded_at`, `participant_id_1`, `participant_id_2`, `participant_name_1`, `participant_name_2`, `is_home_1`, `is_home_2`, `score_1`, `score_2`, `sport_id`, `league_id`, `season_id`, `event_id`, `description`, `location`, `event_status`, `event_date`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+add_event_query = "INSERT INTO `nfl_events` (`recorded_at`, `participant_id_1`, `participant_id_2`, `participant_name_1`, `participant_name_2`, `is_home_1`, `is_home_2`, `score_1`, `score_2`, `sport_id`, `league_id`, `season_id`, `event_id`, `description`, `location`, `event_status`, `event_date`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
 cursor = cnx.cursor()
-cursor.executemany(add_sportsbook_query, inserts)
+cursor.executemany(add_event_query, games_rows)
+cnx.commit()
+cnx.close()
 
 # dt = datetime.datetime.now() - datetime.timedelta(days=3)
 # timestamp = datetime.datetime.now()
