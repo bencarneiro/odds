@@ -5,9 +5,12 @@ name = "pypi"
 
 [packages]
 mysql-connector = "==2.2.9"
-pysbr = {git = "https://github.com/JeMorriso/PySBR.git", editable = true}
 
 [dev-packages]
 
 [requires]
 python_version = "3.8"
+
+[packages.python-sbr]
+git = "https://github.com/JeMorriso/PySBR.git"
+editable = true

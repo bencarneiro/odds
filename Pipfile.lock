@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e2d72cef59ecaaeecdcdbbe5e26172f2b26c81adca31e042ab750ca8cd28a91c"
+            "sha256": "9489d2e1dcf93934384d24f0261d656eca02d0fc30dde74fe21b84428ab6b416"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -136,10 +136,6 @@
                 "sha256:dfd18337c523ba4b6a58801c164c1904a9d4d1b1747c7d5dbf45b693a49d93d0"
             ],
             "version": "==2.3"
-        },
-        "pysbr": {
-            "editable": true,
-            "git": "https://github.com/JeMorriso/PySBR.git"
         },
         "python-dateutil": {
             "hashes": [
