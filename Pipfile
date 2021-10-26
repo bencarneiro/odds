@@ -10,4 +10,4 @@ pysbr = {git = "https://github.com/JeMorriso/PySBR.git", editable = true}
 [dev-packages]
 
 [requires]
-python_version = "3.8"
+python_version = "3.7"
