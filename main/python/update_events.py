@@ -9,7 +9,13 @@ cnx = mysql.connector.connect(user='ben', password='',
                               database='odds')
 cursor = cnx.cursor()
 
-dt = datetime.datetime.now()- datetime.timedelta(days=1)
+# This is the script that needs the most work
+# it needs to SELECT to see if a game exists
+# Then conditionally INSERT INTO or UPDATE SET 
+# depending on if the game needs to be created or the latest information updated
+# The score should update frequently if possible, but the other information isn't as vital
+
+dt = datetime.datetime.now() - datetime.timedelta(days=1)
 nfl = NFL()
 games = EventsByDate(nfl.league_id, dt).list()
 games_rows = []
